@@ -1,38 +1,77 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
 
-body {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding: 100px;
-  font-size: 13px;
-  background-color: #000000;
+*, *:before, *:after{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif; color: "black"
 }
 
-#green {
-  background: #008000;
-  margin: 100 auto;
-  width: 1400px;
-  padding: 100px;
-  text-align: center;
-  /* border-radius */
-  -webkit-border-radius: 215px;
-  -moz-border-radius: 215px;
-  border-radius: 30px;
-  /* box-shadow */
-  -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-  -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-  box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
-  margin-top: 10px;
-}
-<a href="" class="button">Go to Google</a>
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+/*| Navigation |*/
 
-    text-decoration: none;
-    color: initial;
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+  border: 2px solid rgba(0,0,0,.1);
 }
-  #title {
-   color: white;
-   font-family: Impact;
-  font-size: 100;
+  nav ul{
+    list-style: none;
+    position: relative;
+    float: right;
+    margin-right: 100px;
+    display: inline-table;
   }
+    nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+    nav ul li:hover{background: rgba(0,0,0,.15);}
+    nav ul li:hover > ul{display: block;}
+    nav ul li{
+      float: left;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+      nav ul li a{
+        display: block; 
+        padding: 30px 20px;
+        color: #222; 
+        font-size: .9em;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      nav ul ul{
+        display: none;
+        background: #FFFFFF;
+        position: absolute; 
+        top: 100%;
+        box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+        border: 1px solid rgba(0,0,0,.1);
+      }
+        nav ul ul li{float: none; position: relative;}
+          nav ul ul li a {
+            padding: 15px 30px; 
+            border-bottom: 1px solid rgba(0,0,0,.05);
+          }
+          nav ul ul ul {
+            position: absolute; 
+            left: 100%; 
+            top:0;
+          }	
+a href{
+    text-decoration: underline wavy red;
+    text-decoration: none
+}
+html, body { height: 100%; width: 100%; margin: 0;}
+#whale {height: 99.5%; width: 100%;}
